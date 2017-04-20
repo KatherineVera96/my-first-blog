@@ -1,0 +1,66 @@
+{% extends 'brainture/base.html' %}
+
+{% load staticfiles %}
+
+{% block 'styles' %}
+	<link rel="stylesheet" type="text/css" href= {% static 'brainture/styles/conocenosstyles.css' %}>
+{% endblock 'styles' %}
+
+{% block 'title' %}
+	Conócenos
+{% endblock 'title' %}
+
+{% block 'content' %}
+	<div id="div_contenido">
+		<div class="container2">
+			<p class="texto_titulo">¿Quienes somos?</p>
+			<hr class="lineaDeSeparacion"></hr>		
+			<p class="texto_parrafo">Somos 4 estudiantes de la <STRONG>Universidad San Buenaventura Cali</STRONG> de <STRONG>Ingeniería Multimedia</STRONG> e <STRONG>Ingeniería de Sistemas</STRONG> trabajando en conjunto para lograr este curso de métodos numéricos llamado <STRONG><em>Brainture</em></STRONG>.</p>			
+			<div class="div_integrante">
+				<div class="div_foto">
+					<img class="img_conocenos" src= {% static 'brainture/imagenes/fotoPrueba.jpg' %} >
+					<p>Juan Camilo Duque Delgado</p>
+					<div class="div_parrafo_conocenos">
+						
+					</div>
+					<div class="div_parrafo_conocenos">
+						<p class="texto_parrafo2">Estudiante de Ingeniería Multimedia</p>
+					</div>
+				</div>	
+			</div>
+			<div class="div_integrante">
+				<div class="div_foto">
+					<img class="img_conocenos" src= {% static 'brainture/imagenes/fotoPrueba.jpg' %} >
+					<div class="div_parrafo_conocenos">
+						<p>Camilo Salguero Marín</p>
+					</div>
+					<div class="div_parrafo_conocenos">
+						<p class="texto_parrafo2">Estudiante de Ingeniería Multimedia</p>
+					</div>
+				</div>
+			</div>
+			<div class="div_integrante">	
+				<div class="div_foto">
+					<img class="img_conocenos" src= {% static 'brainture/imagenes/fotoPrueba.jpg' %} >
+					<div class="div_parrafo_conocenos">
+						<p>Karym Lizeth Correa Diosa</p>
+					</div>
+					<div class="div_parrafo_conocenos">
+						<p class="texto_parrafo2">Estudiante de Ingeniería Multimedia</p>
+					</div>
+				</div>	
+			</div>
+			<div class="div_integrante">
+				<div class="div_foto">
+					<img class="img_conocenos" src= {% static 'brainture/imagenes/fotoPrueba.jpg' %} >
+					<div class="div_parrafo_conocenos">
+						<p>Alejandro Beltrán</p>
+					</div>
+					<div class="div_parrafo_conocenos">
+						<p class="texto_parrafo2">Estudiante de Ingeniería de Sistemas</p>
+					</div>
+				</div>
+			</div>				
+		</div>
+	</div>
+{% endblock 'content' %}

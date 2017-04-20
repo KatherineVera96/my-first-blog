@@ -1,0 +1,45 @@
+{% extends 'logictree/base.html' %}
+
+{% block 'title' %}
+	Trapecio
+{% endblock 'title' %}
+
+{% block 'content' %}
+<form action="{% url 'logictree:trapecioview' %}" method="POST">
+	{% csrf_token %}
+	<div>
+ 		<h2>metodo de integracion por trapecios</h2>
+		<br></br>
+		<label for="funcion"><strong>funcion:</strong>
+		<input type="text" value="" id="funcion" name="funcion"></label>
+		<br></br>
+		<br></br>
+		<label for="funcion"><strong>intervalo superior:</strong>
+		<input type="text" value="" id="intervaloa" name="intervaloa"></label>
+		<br></br>
+		<br></br>
+		<label for="funcion"><strong>intervalo inferior:</strong>
+		<input type="text" value="" id="intervalob" name="intervalob"></label>
+		<br></br>
+		<br></br>
+		<label for="funcion"><strong>numero de particiones:</strong>
+		<input type="text" value="" id="npart" name="npart"></label>
+		<br></br>
+	</div>
+	<a><input type="submit" value="convertir"/></a>
+	<input type="submit" value="limpiar"/>
+	<a href="https://www.geogebra.org/graphing">graficar mientras</a>
+	<div>
+	</div>
+	<br></br><br></br>
+	<tbody>
+		{% if enviar %}
+		<tr>
+			<td>la intrgral es:</td>
+			<td> {{enviar}}</td>
+		</tr>
+		{% endif %}
+	</tbody>
+</form>
+	<br></br><br></br>
+{% endblock  %}

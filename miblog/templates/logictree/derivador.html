@@ -1,0 +1,48 @@
+{% extends 'logictree/base.html' %}
+
+{% load staticfiles %}
+
+{% block 'title' %}
+	Derivador
+{% endblock 'title' %}
+
+{% block 'content' %}
+	<div id="div_contenido">
+		<div class="container">
+			<p class="texto_titulo">Derivador de funciones</p>
+			<hr class="lineaDeSeparacion">
+			<form method="get">
+				<div class="form-input">
+					<p class="nombre_input">F(x)</p>
+					<input id="i_funcion" type="text" placeholder="" class="funcion">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">X</p>
+					<input id="i_x" type="text" placeholder="" class="decimal">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">F'(x)</p>
+					<input id="i_r1" type="text" placeholder="" class="funcion" disabled="true">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">Evaluada en X</p>
+					<input id="i_r2" type="text" placeholder="" class="decimal" disabled="true">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">F''(x)</p>
+					<input id="i_r3" type="text" placeholder="" class="funcion" disabled="true">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">Evaluada en X</p>
+					<input id="i_r4" type="text" placeholder="" class="decimal" disabled="true">
+				</div>
+			</form>
+			<button type="submit" id="btnCalcular" name="btnCalcular" value="Calcular">
+			<button type="submit "id="btnLimpiar" class="button" name="Limpiar">
+		</div>
+	</div>
+{% endblock 'content' %}
+
+{% block 'scripts' %}
+	<script type="text/javascript" src= {% static 'logictree/scripts/derivadorscripts.js' %} ></script>
+{% endblock 'scripts' %}

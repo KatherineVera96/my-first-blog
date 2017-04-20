@@ -1,0 +1,60 @@
+{% extends 'logictree/base.html' %}
+
+{% load staticfiles %}
+
+{% block 'title' %}
+	secante
+{% endblock 'title' %}
+
+{% block 'content' %}
+	<div id="div_contenido">
+		<div class="container">
+			<p class="texto_titulo">Método de secante</p>
+			<hr class="lineaDeSeparacion">
+			<form method="get">
+				<div class="form-input">
+					<p class="nombre_input">F(x)</p>
+					<input id="i_funcion" type="text" placeholder="" class="funcion">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">x0</p>
+					<input id="i_a" type="text" placeholder="" class="decimal">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">x1</p>
+					<input id="i_b" type="text" placeholder="" class="decimal">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">Error de tolerancia</p>
+					<input id="i_err" type="text" placeholder="" class="decimal">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">Resultado</p>
+					<input id="i_resultado" type="text" placeholder="" disabled="true">
+				</div>
+			</form>
+			<button type="submit" id="btnCalcular" name="btnCalcular" value="Calcular">
+			<button type="submit "id="btnLimpiar" class="button" name="Limpiar">
+		</div>
+		<div class="container">
+			<p class="inline titulo_tabla1">I</p>
+			<p class="inline titulo_tabla2">Raíz</p>
+			<p class="inline titulo_tabla2">Error</p>
+			<div id="div_tabla">
+
+			</div>
+		</div>
+		<div class="container">
+			<div class="link_container">
+				<a href= {% static 'logictree/pdf/' %} target="blank" class="button" >método de secante</a>
+			</div>
+		</div>
+		<div class="container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/suQwXZDI2Eg" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+{% endblock 'content' %}
+
+{% block 'scripts' %}
+	<script type="text/javascript" src= {% static 'logictree/scripts/secante.js' %} ></script>
+{% endblock 'scripts' %}

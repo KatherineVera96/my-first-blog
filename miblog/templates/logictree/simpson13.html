@@ -1,0 +1,47 @@
+{% extends 'logictree/base.html' %}
+
+{% load staticfiles %}
+
+{% block 'title' %}
+	Simpson 1/3
+{% endblock 'title' %}
+
+{% block 'content' %}
+<form action="{% url 'logictree:simpson13view' %}" method="POST">
+{% csrf_token %}
+
+<div >
+		<h2>Metodo de integracion Simpson 1/3</h2>
+		<br></br>
+		<label for="funcion"><strong>Funcion:</strong>
+
+		<input type="text" value="" id="funcion" name="funcion"></label>
+
+		<br></br>
+		<label for="intervaloa"><strong>Intervalo superior:</strong>
+		<input type="text" value="" id="intervaloa" name="intervaloa"></label>
+		<br></br>
+		<label for="intervalob"><strong>Intervalo Inferior:</strong>
+		<input type="text" value="" id="intervalob" name="intervalob"></label>
+		<br></br>
+		<label for="npart"><strong>numero de particiones:</strong>
+		<input type="text" value="" id="npart" name="npart"></label>
+		<br></br>
+
+</div>
+<div ><a><input type="Submit" value="Convertir"/></a><input type="Submit" value="Limpiar"/></div>
+	<a href="https://www.geogebra.org/graphing">graficar mientras</a>
+<br></br><br></br>
+<tbody>
+	{% if enviar %}
+	<tr>
+		<td>la integral es:</td>
+		<td>{{enviar}}</td>
+	</tr>
+	{% endif %}
+</tbody>
+
+</form>
+
+<br></br><br></br><br></br>
+{% endblock 'content' %}

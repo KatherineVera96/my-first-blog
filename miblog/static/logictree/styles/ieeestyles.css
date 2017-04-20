@@ -1,0 +1,29 @@
+input{
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+#input_signo32{	
+	margin: 1px;
+	width: 5%;	
+}
+#input_exponente32{
+	margin: 1px;
+	width: 20%;
+}
+#input_mantisa32{
+	margin: 1px;
+	width: 45%;
+}
+#input_signo64{	
+	margin: 1px;
+	width: 7%;
+}
+#input_exponente64{
+	margin: 1px;
+	width: 69%;
+}
+#input_mantisa64{
+	margin: 1px;
+	margin-top: 15px;
+	width: 80%;
+}

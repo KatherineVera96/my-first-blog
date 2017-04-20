@@ -1,0 +1,30 @@
+{% extends 'logictree/base.html' %}
+
+{% block 'title' %}
+	Graficador
+{% endblock 'title' %}
+
+{% block 'content' %}
+	<div id="div_contenido">
+		<div class="container">
+			<p class="texto_titulo">Graficador de expresiones</p>
+			<hr class="lineaDeSeparacion">
+			<form method="get">
+				<div class="form-input">
+					<p class="nombre_input">F(x)</p>
+					<input type="text" placeholder="" class="funcion">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">a</p>
+					<input type="text" placeholder="" class="decimal">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">b</p>
+					<input type="text" placeholder="" class="decimal">
+				</div>
+			</form>
+			<a id="btnCalcular" class="button">Graficar</a>
+				<a href="https://www.geogebra.org/graphing">graficar mientras</a>
+		</div>
+	</div>
+{% endblock 'content' %}

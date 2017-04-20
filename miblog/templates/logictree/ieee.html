@@ -1,0 +1,57 @@
+{% extends 'logictree/base.html' %}
+
+{% load staticfiles %}
+
+{% block 'styles' %}
+	<link rel="stylesheet" type="text/css" href= {% static 'logictree/styles/ieeestyles.css' %} >
+{% endblock 'styles' %}
+
+{% block 'title' %}
+	IEEE 754
+{% endblock 'title' %}
+
+{% block 'content' %}
+	<div id="div_contenido">
+		<div class="container">
+			<p class="texto_titulo">Punto flotante IEEE 754 de 32 y 64 bits</p>
+			<hr class="lineaDeSeparacion">
+			<form method="get">
+				<div class="form-input">
+					<p class="nombre_input">Decimal</p>
+					<input id="i_decimal" type="text" class="decimal" placeholder="Dígitos del 0 al 9">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input2">32 bits</p>
+					<input type="text" id="input_signo32" class="ieee 32" placeholder="+-" value="" maxlength = "1">
+					<input type="text" id="input_exponente32" class="ieee 32" placeholder="Exponente" maxlength = "8">
+					<input type="text" id="input_mantisa32" class="ieee 32" placeholder="Mantisa" maxlength = "23">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input2">64 bits</p>
+					<input type="text" id="input_signo64" class="ieee 64" placeholder="+-" maxlength = "1">
+					<input type="text" id="input_exponente64" class="ieee 64" placeholder="Exponente" maxlength = "11">
+					<div id="div_input_mantisa64">
+						<input type="text" id="input_mantisa64" class="ieee 64" placeholder="Mantisa" maxlength = "52">
+					</div>
+				</div>
+			</form>
+			<button type="submit "id="btnLimpiar" class="button" name="Limpiar">
+		</div>
+		<div class="container">
+			<div class="link_container">
+				<a href= {% static 'logictree/pdf/' %} target="blank" class="button" >Explicación del estandar IEEE 754 32 bits</a>
+			</div>
+			<div class="link_container">
+				<a href= {% static 'logictree/pdf/' %} target="blank" class="button" >Explicación del estandar IEEE 754 64 bits</a>
+			</div>
+		</div>
+		<div class="container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/TuZglh310NA" frameborder="0" allowfullscreen></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/wAsAkXies_M" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+{% endblock 'content' %}
+
+{% block 'scripts' %}
+	<script type="text/javascript" src= {% static 'logictree/scripts/ieeescripts.js' %} ></script>
+{% endblock 'scripts' %}

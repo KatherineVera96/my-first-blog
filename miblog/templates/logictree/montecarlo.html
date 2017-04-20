@@ -1,0 +1,49 @@
+{% extends 'logictree/base.html' %}
+
+{% load staticfiles %}
+
+{% block 'title' %}
+	Montecarlo
+{% endblock 'title' %}
+
+{% block 'content' %}
+	<div id="div_contenido">
+		<div class="container">
+			<p class="texto_titulo">Metodo de Montecarlo</p>
+			<hr class="lineaDeSeparacion">
+			<form method="get">
+				<div class="form-input">
+					<p class="nombre_input">F(x)</p>
+					<input type="text" placeholder="" class="funcion">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">a</p>
+					<input type="text" placeholder="" class="decimal">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">b</p>
+					<input type="text" placeholder="" class="decimal">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">n</p>
+					<input type="text" placeholder="" class="decimal">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">M</p>
+					<input type="text" placeholder="" class="decimal">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">Resultado</p>
+					<input type="text" placeholder="" disabled="true">
+				</div>
+			</form>
+			<input type="submit" id="btnCalcular" name="btnCalcular" value="Calcular">
+		</div>
+		<div class="container">
+			<div class="link_container">
+				<a href= {% static 'brainture/pdf/montecarlo.pdf' %} target="blank" class="button" >Explicación del método de Montecarlo*</a>
+			</div>
+		</div>
+
+	</div>
+{% endblock 'content' %}

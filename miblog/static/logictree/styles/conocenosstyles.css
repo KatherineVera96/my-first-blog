@@ -1,0 +1,21 @@
+.img_conocenos{
+	width: 100%;
+	border-radius: 0%;
+	
+}
+.div_integrante{	
+	display: inline-block;
+	width: 25%;	
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: #87d6be;
+	border-radius: 0px 0px 5px 5px;
+	box-shadow: 1px 1px 30px 0px #1ebb90;
+}
+.div_foto{
+
+}
+.div_parrafo_conocenos{
+
+}

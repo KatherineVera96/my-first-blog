@@ -1,0 +1,58 @@
+{% extends 'logictree/base.html' %}
+
+{% load staticfiles %}
+
+{% block 'title' %}
+	Conversor de bases
+{% endblock 'title' %}
+
+{% block 'content' %}
+	<div id="div_contenido">
+		<div class="container">
+			<p class="texto_titulo">Conversor de bases numéricas</p>
+			<hr class="lineaDeSeparacion">
+			<form method="get">
+				<div class="form-input">
+					<p class="nombre_input">Decimal</p>
+					<input id="i_decimal" type="text" class="decimal" placeholder="Ingrese dígitos del 0 al 9">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">Binaria</p>
+					<input id="i_binaria" type="text" class="binario" placeholder="Dígitos 0 y 1">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">Octal</p>
+					<input id="i_octal" type="text" class="octal" placeholder="Dígitos del 0 al 7">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">Hexadecimal</p>
+					<input id="i_hexadecimal" type="text" class="hexadecimal" placeholder="Dígitos del 0 al 9, letras de la A a la F" name="textHexa">
+				</div>
+			</form>
+			<button type="submit "id="btnLimpiar" class="button" name="Limpiar">
+		</div>
+		<div class="container">
+			<div class="link_container">
+				<a href= {% static 'logictree/pdf/' %} target="blank" class="button" >Explicación de conversión en base binaria</a>
+			</div>
+			<div class="link_container">
+				<a href= {% static 'logictree/pdf/' %} target="blank" class="button" >Explicación de conversión en base octal</a>
+			</div>
+			<div class="link_container">
+				<a href= {% static 'logictree/pdf/' %} target="blank" class="button" >Explicación de conversión en base hexadecimal</a>
+			</div>
+		</div>
+		<div class="container">
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/w1k_UsAVAkY" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/2ddztdP44EE" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/ofgGdpiEkWw" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/_H7IAY-Fr-8" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/Kp6s3rWehf4" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/MeDKbeY8Rbs" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+{% endblock 'content' %}
+
+{% block 'scripts' %}
+	<script type="text/javascript" src={% static 'logictree/scripts/basesscript.js' %}></script>
+{% endblock 'scripts' %}

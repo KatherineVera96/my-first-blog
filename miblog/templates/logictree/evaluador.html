@@ -1,0 +1,36 @@
+{% extends 'logictree/base.html' %}
+
+{% load staticfiles %}
+
+{% block 'title' %}
+	Evaluador
+{% endblock 'title' %}
+
+{% block 'content' %}
+	<div id="div_contenido">
+		<div class="container">
+			<p class="texto_titulo">Evaluador de expresiones</p>
+			<hr class="lineaDeSeparacion">
+			<form method="get">
+				<div class="form-input">
+					<p class="nombre_input">F(x)</p>
+					<input id="i_funcion" type="text" placeholder="Ingrese una función que dependa de x" class="funcion">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">X</p>
+					<input id="i_x" type="text" placeholder="Ingrese el valor de x" class="decimal">
+				</div>
+				<div class="form-input">
+					<p class="nombre_input">Resultado</p>
+					<input id="i_resultado" type="text" placeholder="" disabled="true">
+				</div>
+			</form>
+			<button type="submit" id="btnCalcular" name="btnCalcular" value="Calcular">
+		
+		</div>
+	</div>
+{% endblock 'content' %}
+
+{% block 'scripts' %}
+	<script type="text/javascript" src= {% static 'logictree/scripts/evaluadorscript.js' %} ></script>
+{% endblock 'scripts' %}
